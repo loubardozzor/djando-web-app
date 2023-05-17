@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Merchex</title>
-    </head>
-    <body>
+{% extends 'listings/base.html' %}
+{% block content %}
         <h1> Hello Django !</h1>
         <p>
             Mes groupes preferes sont :
@@ -14,5 +9,4 @@
                 {% endfor %}
             </ul>
         </p>
-    </body>
-</html>
+{% endblock %}

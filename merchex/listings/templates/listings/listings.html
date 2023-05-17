@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>listing</title>
-</head>
-<body>
+{% extends 'listings/base.html' %}
+{% block content %}
+
 <h1>Les Listings </h1>
     <p> Les listings disponibles</p>
     <ul>
@@ -13,6 +9,4 @@
         {% endfor %}
 
     </ul>
-
-</body>
-</html>
+{% endblock %}
