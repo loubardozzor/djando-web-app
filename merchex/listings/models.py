@@ -20,6 +20,8 @@ class Band(models.Model):
     official_homepage = models.fields.URLField(null=True, blank=True)
 
 class Listing(models.Model):
+    def __str__(self):
+        return f'{self.title}'
     class Type(models.TextChoices):
         disques = 'Records'
         vetement = 'Clothing'
@@ -30,6 +32,8 @@ class Listing(models.Model):
     description = models.fields.CharField(max_length=100, default='')
     sold = models.fields.BooleanField(default=True)
     year = models.fields.IntegerField(null=True, blank=True)
+    band = models.ForeignKey(Band, null=True, on_delete=models.SET_NULL)
+
 
 
 
