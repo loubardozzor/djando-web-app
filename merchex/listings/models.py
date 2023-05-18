@@ -1,6 +1,8 @@
 from django.db import models
 from django.core.validators import MaxValueValidator,  MinValueValidator
 class Band(models.Model):
+    def __str__(self):
+        return f'{self.name}'
     class Genre(models.TextChoices):
         HIP_HOP = 'HH'
         SYNTH_POP = 'SP'
@@ -23,10 +25,13 @@ class Listing(models.Model):
         vetement = 'Clothing'
         affiches = 'Posters'
         divers = 'Miscellaneous'
-    title = models.fields.CharField(max_length=100)
-    description = models.fields.CharField(max_length = 100)
+    title = models.fields.CharField(max_length=100, default='')
+    type  = models.fields.CharField(choices=Type.choices, max_length=20, default='Records')
+    description = models.fields.CharField(max_length=100, default='')
     sold = models.fields.BooleanField(default=True)
-    year = models.fields.IntegerField(null=True)
+    year = models.fields.IntegerField(null=True, blank=True)
+
+
 
 
 
