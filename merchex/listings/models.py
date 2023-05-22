@@ -35,7 +35,9 @@ class Listing(models.Model):
     band = models.ForeignKey(Band, null=True, on_delete=models.SET_NULL)
 
 
-
+class Contact(models.Model):
+    email = models.fields.CharField(max_length=100, default='')
+    phoneNumber = models.fields.CharField(max_length=100, default='')
 
 
 

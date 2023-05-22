@@ -1,0 +1,15 @@
+{% extends 'listings/base.html' %}
+
+{% block content %}
+  <h2>{{ listing.title }}</h2>
+
+  <ul>
+      <li>type_de_listing : {{ listing.get_type_display}}</li>
+      <li>description : {{ listing.description}}</li>
+      <li>année : {{listing.year}}</li>
+      <li>groupe: {{listing.band}}</li>
+      <li>vendu ? :{{listing.sold|yesno}}</li>
+  </ul>
+
+
+{% endblock %}
