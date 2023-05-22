@@ -7,6 +7,13 @@
 </head>
 <body>
 <h1>Contact-us</h1>
+<p> Nous sommes la pour vous aider.</p>
+
+<form action="" method="post" novalidate>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Envoyer">
+</form>
 
 </body>
 </html>
