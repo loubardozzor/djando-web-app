@@ -2,6 +2,8 @@
 {% block content %}
 
 <h1>Les Listings </h1>
+
+    <a href="{% url 'listing-create' %}"> Ajouter un nouveau listing</a>
     <p> Les listings disponibles</p>
     <ul>
         {% for listing in listings %}
